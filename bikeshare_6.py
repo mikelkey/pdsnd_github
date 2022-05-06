@@ -46,7 +46,7 @@ def get_filters():
             break
         else:
             print('\nPlease enter a valid day or enter "all"\n')
-    print('-'*40)
+    print('-'*30)
     return city, month, day
 
 def load_data(city, month, day):
@@ -80,8 +80,8 @@ def load_data(city, month, day):
     view_data = input ('\nWould you like to view the data (5 rows at a time)? Type "Yes" or "No"\n').lower()
     while True:
         if view_data == 'yes':
-            print(df.iloc[start_loc : start_loc + 5])
-            start_loc += 5
+            print(df.iloc[start_loc : start_loc + 10])
+            start_loc += 10
             view_data = input('\nWould you like to view more data (5 rows at a time)? Type "Yes" or "No"\n').lower()
         elif view_data == 'no':
             break
@@ -110,7 +110,7 @@ def time_stats(df):
     print('The most common start hour is:\n{}'.format(most_common_start_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -131,7 +131,7 @@ def station_stats(df):
     print('The most common trip is:\n{}'.format((df['combo'].mode()[0])))
 
     print('\nThis took %s seconds.' % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -148,7 +148,7 @@ def trip_duration_stats(df):
     print('The average travel time is:\n{} minutes'.format(mean_travel_time))
 
     print('\nThis took %s seconds.' % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -179,7 +179,7 @@ def user_stats(df):
         print('Earliest, most recent, and most common year of birth information is unavailable for this city.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def main():
     """
