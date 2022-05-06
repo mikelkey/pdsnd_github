@@ -7,7 +7,7 @@
 Bikeshare Project
 
 ### Description
-his bikeshare program compiles data about a bikesharing organization with locations in 3 different cities. Chicago, New York City, and Washington.
+This bikeshare program compiles data about a bikesharing organization with locations in 3 different cities. Chicago, New York City, and Washington.
 Based on user input, it loads data from .csv files, filters the data based on the input and provides statistical computations about the data.
 
 ### Files used
