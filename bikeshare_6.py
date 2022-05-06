@@ -80,8 +80,8 @@ def load_data(city, month, day):
     view_data = input ('\nWould you like to view the data (5 rows at a time)? Type "Yes" or "No"\n').lower()
     while True:
         if view_data == 'yes':
-            print(df.iloc[start_loc : start_loc + 5])
-            start_loc += 5
+            print(df.iloc[start_loc : start_loc + 10])
+            start_loc += 10
             view_data = input('\nWould you like to view more data (5 rows at a time)? Type "Yes" or "No"\n').lower()
         elif view_data == 'no':
             break
